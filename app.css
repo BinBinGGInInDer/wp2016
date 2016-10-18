@@ -8,16 +8,10 @@ p {color:white;text-align: center;}
    margin-left: 400px;
   
 }
-li{
 
-  display:inline;
-  
-  list-style-type: circle;
-}
 #list{
-  color:black;
+  color:white;
   font-size: 18px;
   margin-left: 400px;
-  
-  background-color: #666666;
+  text-align: center;
 }
