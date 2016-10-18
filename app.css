@@ -9,6 +9,8 @@ p {color:white;text-align: center;}
   
 }
 li{display:inline;
+}
+#list{
   color:white;
   font-size: 18px;
   text-align: center;
