@@ -16,3 +16,23 @@ p {color:white;text-align: center;}
   text-align: center;
 
 }
+.showbox {
+	width: 550px;
+	height: 460px;
+	border: 2px solid Yellow;
+	text-align: center;
+}
+.abgne-block {
+	margin-top: 10px;
+	width: 680px;
+	overflow: hidden;
+}
+.abgne-block a {
+	margin-right: 10px;
+}
+.abgne-block a img {
+	width: 140px;
+	height: 92px;
+	border: 2px solid #1dd;
+	vertical-align: middle;
+}
