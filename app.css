@@ -1,7 +1,7 @@
 h1 {color:white;text-align: center; }
 p {color:white;text-align: center;}
 #img {text-align: center;}
-.showbox , .abgne-block {
+img {
   width: auto;
   height : auto;
   max-height: 100%;
