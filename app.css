@@ -1,6 +1,12 @@
 h1 {color:white;text-align: center; }
 p {color:white;text-align: center;}
 #img {text-align: center;}
+img {
+  width: auto;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
+}
 #title{
   color:white;
   font-style: oblique; 
