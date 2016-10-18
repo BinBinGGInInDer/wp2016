@@ -10,6 +10,7 @@ p {color:white;text-align: center;}
 }
 
 #list{
+  display:inline;
   color:white;
   font-size: 18px;
 
