@@ -9,12 +9,12 @@ p {color:white;text-align: center;}
   
 }
 li{display:inline;
-  border: 4px solid black;
-  background-color: #14141f;
+  border: 8px solid black;
+  background-color: #666666;
   list-style-type: circle;
 }
 #list{
-  color:white;
+  color:black;
   font-size: 18px;
   text-align: center;
 }
