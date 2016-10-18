@@ -5,10 +5,12 @@ p {color:white;text-align: center;}
   color:white;
   font-style: oblique; 
   font-size: 22px;
-   margin-left: 100px;
+   margin-left: 400px;
   
 }
-li{display:inline;
+li{
+
+  display:inline;
   border: 24px solid black;
   background-color: #666666;
   list-style-type: circle;
@@ -16,5 +18,5 @@ li{display:inline;
 #list{
   color:black;
   font-size: 18px;
-  text-align: center;
+  margin-left: 400px;
 }
