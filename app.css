@@ -11,12 +11,13 @@ p {color:white;text-align: center;}
 li{
 
   display:inline;
-  border: 24px solid black;
-  background-color: #666666;
+  
   list-style-type: circle;
 }
 #list{
   color:black;
   font-size: 18px;
   margin-left: 400px;
+  border: 24px solid black;
+  background-color: #666666;
 }
