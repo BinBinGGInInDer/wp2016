@@ -1,5 +1,11 @@
 h1 {color:white;text-align: center; }
 p {color:white;text-align: center;}
 #img {text-align: center;}
-#title{color:white;font-style: oblique; font-size: 22px;}
+#title{
+  color:white;
+  font-style: oblique; 
+  font-size: 22px;
+   margin-left: 100px;
+  
+}
 #list{color:white;font-size: 18px;text-align: center;}
