@@ -9,8 +9,8 @@ p {color:white;text-align: center;}
   
 }
 li{display:inline;
-  border: 2px solid black;
-  background-color: lightblue;
+  border: 4px solid black;
+  background-color: #14141f;
   list-style-type: circle;
 }
 #list{
