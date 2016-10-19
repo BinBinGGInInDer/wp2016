@@ -1,4 +1,4 @@
-$("a").mouseover(function(){
+$("img").mouseover(function(){
   $("#show-image").attr('src',$this.attr('href'));
 });
 
