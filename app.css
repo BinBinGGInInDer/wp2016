@@ -41,10 +41,10 @@ img {
 	width: 680px;
 	overflow: hidden;
 }
-.abgne-block a {
+.abgne-block img {
 	margin-right: 10px;
 }
-.abgne-block a img {
+.abgne-block img {
 	width: 140px;
 	height: 92px;
 	border: 2px solid #1dd;
