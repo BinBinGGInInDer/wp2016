@@ -6,7 +6,7 @@
 
     /* tr */
 .css_row{
-  display: table-cell; border:solid 1px red;
+  display: table-row; border:solid 1px red;
 }
 
  /* td , th */
