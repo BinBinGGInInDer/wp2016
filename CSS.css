@@ -1,7 +1,7 @@
-/* table *///display: table;
+/* table *///
 .css_table {
-  
-  border-collapse: collapse;
+  display: table;
+  //border-collapse: collapse;
   width: 100%
 }
 
