@@ -1,52 +1,33 @@
-h1 {color:white;text-align: center; }
-p {color:white;text-align: center;}
-
-img {
-  width: auto;
-  height : auto;
-  max-height: 100%;
-  max-width: 100%;
-	text-align: center;
+/* table */
+.css_table {
+  display: table;
+  border-collapse: collapse;
 }
 
-#img {text-align: center;
-	width: 300px;
-	height: 300px;
-	border: 2px solid white;
+    /* tr */
+.css_row{
+  display: table-row; border:solid 1px red;
 }
 
-#title{
-  color:white;
-  font-style: oblique; 
-  font-size: 22px;
-   margin-left: 250px;
-  margin-top: 30px;
-  
+ /* td , th */
+.cell1 {
+  display: table-cell;
+   width: 180px;
+   border-right: 1px dotted #fff;
+   background:#fcd6d6;
 }
 
-#list{
-  color:white;
-  font-size: 18px;
-  text-align: center;
+.cell2 {
+  display: table-cell;
+  width: 180px;
+  padding-left: 10px;
+  border-right: 1px dotted #fff;
+  background:#eff8ff;
+}
 
-}
-.showbox {
-	width: 550px;
-	height: 460px;
-	border: 2px solid Yellow;
-	text-align: center;
-}
-.abgne-block {
-	margin-top: 10px;
-	width: 680px;
-	overflow: hidden;
-}
-.abgne-block img {
-	margin-right: 10px;
-}
-.abgne-block div img {
-	width: 140px;
-	height: 92px;
-	border: 2px solid #1dd;
-	vertical-align: middle;
+.cell3 {
+  display: table-cell;
+  width: 180px;
+  padding-left: 10px;
+  background:#effff0;
 }
