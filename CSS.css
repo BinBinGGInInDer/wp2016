@@ -10,7 +10,7 @@
 }
 
  /* td , th */
-.cell1 {
+.css_cell1 {
   display: table-cell;
    width: 180px;
    border-right: 1px dotted #fff;
