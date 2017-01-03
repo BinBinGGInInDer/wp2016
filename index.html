@@ -47,10 +47,12 @@
 <div style="font-size: 16px; color:blue; display:inline;" >說明:</div>
 <div style="font-size: 16px; display:inline;"> 黃色為必填事項</div>
   
-<div class="css_table">
-  <div class="css_row">
-    <div class="incell1">項目名稱</div>
-    <div class="incell2">
+//////////////////////////////////////////////////////////////////////////////////
+<table style="background:#03B3D4; border:solid 1px;" >
+
+  <tr>
+    <td>項目名稱</td>
+    <td  colspan="2" >
       <select name="Projectname" style="background:yellow">
         <option selected="true">請選擇項目名稱</option>
         <option >消耗性器材</option>
@@ -61,43 +63,44 @@
         <option >論文發表費</option>
         <option >其他</option>
       </select>
-    </div>
-  </div>
+    </td>
+  </tr>
   
-  <div class="css_row">
-    <div class="incell1">單位</div>
-    <div class="incell1">
+  <tr>
+    <td>單位</td>
+    <td>
       <input type="text" name="Unit" style="width:100px">
-    </div>
-    <div class="incell1">數量</div>
-    <div class="incell1">
+    </td>
+    <td>數量</td>
+    <td>
       <input type="text" name="Num" style="width:100px">
-    </div>
-    <div class="incell1">單價</div>
-    <div class="incell1">
+    </td>
+    <td>單價</td>
+    <td>
       <input type="text" name="Prc" style="width:100px">
-    </div>
-    <div class="incell1">金額</div>
-    <div class="incell1">
-      <input type="text" name="Hwmc" style="background:yellow;width:100px">
-    </div>
-  </div>
+    </td>
+    <td>金額</td>
+    <td>
+      <textarea name="Hwmc" style="background:yellow;width:100px">
+    </textarea>
+  </tr>
   
-  <div class="css_row">
-    <div class="incell1">說明</div>
-    <div class="incell2">
-      <input type="text" class="Longinput" name="Exp">
-    </div>
-  </div>
+  <tr>
+    <td>說明</td>
+    <td  colspan="7" >
+      <textarea cols="100" rows="5" name="Exp">
+    </textarea>
+    </td>
+  </tr>  
+  <tr>
+    <td>備註</td>
+    <td  colspan="7" >
+      <textarea cols="100" rows="5" name="Rmk">
+    </textarea>
+  </tr>
   
-  <div class="css_row">
-    <div class="incell1">備註</div>
-    <div class="incell2">
-      <input type="text" class="Longinput" name="Rem">
-    </div>
-  </div>
   
-</div>  
+</table>
   
 </body>
 </html>
