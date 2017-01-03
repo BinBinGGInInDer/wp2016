@@ -87,8 +87,11 @@ button{
   border:solid 1px; 
 }
 
-.Longinput{
-  height: 70px;
-  width: 500px
-  
+td{
+  border:solid 1px;
+  border-color: #FFB000;
+}
+
+tr{
+  text-align:center;
 }
