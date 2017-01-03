@@ -80,6 +80,6 @@ button{
   display: table-cell;
   width: 180px;
   border-right: 1px dotted #fff;
-  background: yellow;
+  //background: yellow;
   border:solid 1px; 
 }
