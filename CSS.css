@@ -67,3 +67,19 @@ button{
     cursor: pointer; 
     border-radius: 12px;
 }
+
+.incell1{
+  display: table-cell;
+  width: 180px;
+  border-right: 1px dotted #fff;
+  background: gray;
+  border:solid 1px; 
+}
+
+.incellNE{
+  display: table-cell;
+  width: 180px;
+  border-right: 1px dotted #fff;
+  background: yellow;
+  border:solid 1px; 
+}
