@@ -21,11 +21,10 @@
 
 .cell1 {
   display: table-cell;
-   width: 180px;
+   width: 80px;
    border-right: 1px dotted #fff;
    background:#fcd6d6;
   border:solid 1px;
-  width:10%;
 }
 
 .cell3 {
