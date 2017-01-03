@@ -8,6 +8,7 @@
     /* tr */
 .css_row{
   display: table-row; border:solid 1px red;
+  height:auto;
 }
 
  /* td , th */
@@ -27,12 +28,20 @@
   border:solid 1px;
 }
 
-.cell3 {
+.css_cell2 {
   display: table-cell;
   width: 180px;
   padding-left: 10px;
   background:#effff0;
 }
+
+.css_cell3 {
+  display: table-cell;
+  width: 240px;
+  padding-left: 10px;
+  background:#effff0;
+}
+
 #pro {
   display: inline;
   color: #33cc33;
