@@ -14,7 +14,7 @@
  /* td , th */
 .css_cell {
   display: table-cell;
-   width: 180px;
+   width: 90px;
    border-right: 1px dotted #fff;
    background:#fcd6d6;
   border:solid 1px;
