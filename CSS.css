@@ -78,10 +78,17 @@ button{
   text-align:center;
 }
 
-.incellNE{
+.incell2{
   display: table-cell;
-  width: 180px;
+  width: 945px;
+  height:auto;
   border-right: 1px dotted #fff;
   background:gray;
   border:solid 1px; 
+}
+
+.Longinput{
+  height: 70px;
+  width: 500px
+  
 }
