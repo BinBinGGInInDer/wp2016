@@ -19,7 +19,7 @@
   border:solid 1px;
 }
 
-.cell1 {
+.css_cell1 {
   display: table-cell;
    width: 80px;
    border-right: 1px dotted #fff;
