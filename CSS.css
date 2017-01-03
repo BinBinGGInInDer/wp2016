@@ -30,16 +30,18 @@
 
 .css_cell2 {
   display: table-cell;
-  width: 180px;
-  padding-left: 10px;
-  background:#effff0;
+   width: 180px;
+   border-right: 1px dotted #fff;
+   background:#fcd6d6;
+  border:solid 1px;
 }
 
 .css_cell3 {
   display: table-cell;
-  width: 240px;
-  padding-left: 10px;
-  background:#effff0;
+   width: 240px;
+   border-right: 1px dotted #fff;
+   background:#fcd6d6;
+  border:solid 1px;
 }
 
 #pro {
