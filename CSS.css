@@ -30,6 +30,7 @@
 
 .css_cell2 {
   display: table-cell;
+  white-space:pre;
    width: 180px;
    border-right: 1px dotted #fff;
    background:#fcd6d6;
@@ -38,6 +39,7 @@
 
 .css_cell3 {
   display: table-cell;
+  white-space:pre;
    width: 500px;
    border-right: 1px dotted #fff;
    background:#fcd6d6;
