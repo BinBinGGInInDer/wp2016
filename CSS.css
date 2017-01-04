@@ -31,19 +31,15 @@
 
 .css_cell2 {
   display: table-cell;
-  word-break: normal;
-  word-wrap:break-word;
    width: 180px;
    border-right: 1px dotted #fff;
    background:#FFC5BF;
   border:solid 1px;
-  table-layout:fixed;
+ 
 }
 
 .css_cell3 {
   display: table-cell;
-  word-break: normal;
-  word-wrap:break-word;
    width: 500px;
    border-right: 1px dotted #fff;
    background:#FFC5BF;
