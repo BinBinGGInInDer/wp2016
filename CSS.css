@@ -16,7 +16,7 @@
   display: table-cell;
    width: 90px;
    border-right: 1px dotted #fff;
-   background:#fcd6d6;
+   background:#FFC5BF;
   border:solid 1px;
 }
 
@@ -24,8 +24,9 @@
   display: table-cell;
    width: 80px;
    border-right: 1px dotted #fff;
-   background:#FF7465;
+   background:#FFC5BF;
   border:solid 1px;
+  table-layout:fixed;
 }
 
 .css_cell2 {
@@ -36,6 +37,7 @@
    border-right: 1px dotted #fff;
    background:#FF7465;
   border:solid 1px;
+  table-layout:fixed;
 }
 
 .css_cell3 {
