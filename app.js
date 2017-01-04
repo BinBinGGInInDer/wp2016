@@ -1,9 +1,9 @@
 $(doucument).ready(function(){
-  $("#1").hide();
-  $("#2").hide();
-  $("#3").hide();
-  $("#4").hide();
-  $("#5").hide();
+  $("#R1").hide();
+  $("#R2").hide();
+  $("#R3").hide();
+  $("#R4").hide();
+  $("#R5").hide();
 });
 
 
