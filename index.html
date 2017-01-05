@@ -85,15 +85,15 @@
   <tr>
     <td>項目名稱</td>
     <td  colspan="2" >
-      <select id="Projectname" style="background:yellow">
-        <option selected="true">請選擇項目名稱</option>
-        <option >消耗性器材</option>
-        <option >電腦使用費</option>
-        <option >雜支</option>
-        <option >資料檢索費</option>
-        <option >實驗動物</option>
-        <option >論文發表費</option>
-        <option >其他</option>
+      <select id="Projectname"  style="background:yellow">
+        <option selected="true" value="1">請選擇項目名稱</option>
+        <option value="0" >消耗性器材</option>
+        <option value="0" >電腦使用費</option>
+        <option value="0" >雜支</option>
+        <option value="0" >資料檢索費</option>
+        <option value="0" >實驗動物</option>
+        <option value="0" >論文發表費</option>
+        <option value="0" >其他</option>
       </select>
     </td>
   </tr>
@@ -132,7 +132,7 @@
   </tr>
     <tr>
     <td colspan="8">
-    <button name="Sav" onclick="$('#amount').val(amount);">
+    <button name="Sav">
     Save
     </button>
     <button name="Dsc">
