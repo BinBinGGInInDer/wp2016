@@ -6,7 +6,7 @@ $(document).ready(init); /*畫面上所有的DOM都載入後*/
             $.fn.removeRow = function (row) {
                 // Make sure row has value     
                 if (!row) { row = 1; }
-                $('.class_table tr:nth-child(' + row + '), .class_table tr:nth-child(' + row + ')', this).hide();/*該欄隱藏*/
+                $('.css_table tr:nth-child(' + row + '), .css_table tr:nth-child(' + row + ')', this).hide();/*該欄隱藏*/
                 return this;
             };
             /*註冊addRowl函數*/
