@@ -2,6 +2,7 @@ $(document).ready(function() { /*畫面上所有的DOM都載入後*/
 
         
 $('#Sav').onclick(function() { 
+        alert("有必填未填");
         if( document.getElementById('Hwmc').value=='' || document.getElementById('Projectname').value=="請選擇項目名稱" )
                 alert("有必填未填");
         else{
