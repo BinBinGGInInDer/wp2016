@@ -6,26 +6,32 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script>
 	$(document).ready(function() { /*畫面上所有的DOM都載入後*/
-
         
 	$('#Sav').click(function() { 
-        	if( document.getElementById('Hwmc').value=='' || document.getElementById('Projectname').value=="請選擇項目名稱" )
+        	
+        	if( document.getElementById('Hwmc').value=='' || document.getElementById('Projectname').value==1 )
                 	alert("有必填未填");
         	else{
-                	var  check = $("#M5").val();
+                	var  check = $('#M5').val();
                 	if( check != 0)
                         	alert("超過五個物品囉");
                 	else{
-                        	var T=$("#Projectname").text();
-                        	$("P5").text(T);
-                        	T=$("#Unit").text();
-                        	$("U5").text(T);
-                       	 var N=$("#Num").val();
-                        	$("N5").val(N);
-                        	var P=$("#Prc").val();
-                       	 $("P5").val(P);
-                       	 $("#R5").show();
-                
+                    		
+                        	var T=$("#Projectname option:selected").text();
+                        	$('#Pj5').text(T);
+                            
+                            var S =  $("#Unit").text();
+                            
+                            alert($S);
+                            
+                        	$('#U5').text(T);
+                            
+                       	 var N=$('#Num').val();
+                        	$('#N5').val(N);
+                        	var P=$('#Prc').val();
+                       	 $('#P5').val(P);
+                       	 $('#R5').show();
+                		 return false; 
                 	}
         	}
 	});
@@ -103,26 +109,24 @@
     <td class="css_cell" id="P5"> 0 </td>
     <td class="css_cell" id="M5"> 0 </td>
   </tr>
-
 </table>
 <div style="font-size: 16px; color:blue; display:inline;" ><br><br><br>說明:</div>
 <div style="font-size: 16px; display:inline;"> 黃色為必填事項</div>
   
 	
 <table style="background:#5BC8DD; border:solid 1px;" class="input">
-
   <tr>
     <td>項目名稱</td>
     <td  colspan="2" >
       <select id="Projectname"  style="background:yellow">
         <option selected="true" value="1">請選擇項目名稱</option>
-        <option value="0" >消耗性器材</option>
-        <option value="0" >電腦使用費</option>
-        <option value="0" >雜支</option>
-        <option value="0" >資料檢索費</option>
-        <option value="0" >實驗動物</option>
-        <option value="0" >論文發表費</option>
-        <option value="0" >其他</option>
+        <option value="2" >消耗性器材</option>
+        <option value="3" >電腦使用費</option>
+        <option value="4" >雜支</option>
+        <option value="5" >資料檢索費</option>
+        <option value="6" >實驗動物</option>
+        <option value="7" >論文發表費</option>
+        <option value="8" >其他</option>
       </select>
     </td>
   </tr>
