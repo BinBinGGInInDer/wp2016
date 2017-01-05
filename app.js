@@ -1,4 +1,4 @@
-$(document).ready(function({})); /*畫面上所有的DOM都載入後*/
+$(document).ready(function(){}); /*畫面上所有的DOM都載入後*/
         
         }
 
@@ -25,6 +25,7 @@ $("#Sav").onclick(function(){
                 
                 }
         }
+});
         
   $("#show-image").attr('src',$(this).attr('src'));
 });
