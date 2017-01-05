@@ -1,19 +1,17 @@
 /* table *///
 .css_table {
-  display: table;
   //border-collapse: collapse;
   width: 100%
 }
 
     /* tr */
 .css_row{
-  display: table-row; border:solid 1px red;
+  border:solid 1px red;
   height:auto;
 }
 
  /* td , th */
 .css_cell {
-  display: table-cell;
    width: 90px;
    border-right: 1px dotted #fff;
    background:#FFC5BF;
@@ -21,7 +19,6 @@
 }
 
 .css_cell1 {
-  display: table-cell;
    width: 80px;
    border-right: 1px dotted #fff;
    background:#FFC5BF;
@@ -30,7 +27,6 @@
 }
 
 .css_cell2 {
-  display: table-cell;
    width: 180px;
    border-right: 1px dotted #fff;
    background:#FFC5BF;
@@ -39,7 +35,6 @@
 }
 
 .css_cell3 {
-  display: table-cell;
    width: 500px;
    border-right: 1px dotted #fff;
    background:#FFC5BF;
@@ -89,11 +84,11 @@ button{
   border:solid 1px; 
 }
 
-td{
+.input  td{
   border:solid 1px;
   border-color: #FFCF65;
 }
 
-tr{
+.input  tr{
   text-align:center;
 }
