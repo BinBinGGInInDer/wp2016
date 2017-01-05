@@ -4,7 +4,7 @@
 $("#Sav").onclick(function(){
         var C = $("#Hwmc").val();
         var check =$("#Projectname").val();
-        if( C ==null || check=="1" )
+        if( C ==0 || check=="1" )
                 alert("有必填未填");
         else{
                 check = $("#M5").val();
