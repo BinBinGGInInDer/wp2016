@@ -20,18 +20,22 @@
                         	var T=$("#Projectname option:selected").text();
                         	$('#Pj5').text(T);
                             
-                            var S =  $("#Unit").text();
+                            var S = document.getElementById("Unit").value;
+    						$('#U5').text(S);
                             
-                            alert($S);
+                            var N = $('#Num').val();
+							var P = $('#Prc').val();
+							    
                             
-                        	$('#U5').text(T);
+                        	$('#N5').text(N);
                             
-                       	 var N=$('#Num').val();
-                        	$('#N5').val(N);
                         	var P=$('#Prc').val();
-                       	 $('#P5').val(P);
-                       	 $('#R5').show();
-                		 return false; 
+                       	 	$('#P5').text(P);
+                         	var M=$('#Hwmc').val();
+                            $('#M5').text(M);
+                       	 	$('#R5').show();
+                            
+                		 	return false; 
                 	}
         	}
 	});
@@ -103,11 +107,11 @@
     <td class="css_cell1"><button>Revise</button></td>
     <td class="css_cell1"><button onclick="$('#R5').hide();">Delete</button></td>
     <td class="css_cell2" id="Pj5"></td>
-    <td class="css_cell3" id="E5">3</td>
-    <td class="css_cell" id="U5"> 0 </td>
-    <td class="css_cell" id="N5"> 0 </td>
-    <td class="css_cell" id="P5"> 0 </td>
-    <td class="css_cell" id="M5"> 0 </td>
+    <td class="css_cell3" id="E5"></td>
+    <td class="css_cell" id="U5"></td>
+    <td class="css_cell" id="N5"></td>
+    <td class="css_cell" id="P5"></td>
+    <td class="css_cell" id="M5"></td>
   </tr>
 </table>
 <div style="font-size: 16px; color:blue; display:inline;" ><br><br><br>說明:</div>
