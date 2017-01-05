@@ -1,7 +1,7 @@
-$(document).ready(init); /*畫面上所有的DOM都載入後*/
-function init() {
+$(document).ready(function() { /*畫面上所有的DOM都載入後*/
+
         
-$("#Sav").onclick(function(){
+$)('#Sav').click(function() { 
         var C = $("#Hwmc").val();
         var check =$("#Projectname").val();
         if( C ==0 || check=="1" )
