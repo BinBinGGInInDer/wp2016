@@ -1,5 +1,5 @@
-/*$(document).ready(function(){}); /*畫面上所有的DOM都載入後*/
-        
+$(document).ready(init); /*畫面上所有的DOM都載入後*/
+function init() {
         
 $("#Sav").onclick(function(){
         var C = $("#Hwmc").val();
@@ -25,6 +25,8 @@ $("#Sav").onclick(function(){
         }
 });
         
-  $("#show-image").attr('src',$(this).attr('src'));
-});
+        
+        
+};
+
 
