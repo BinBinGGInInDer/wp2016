@@ -1,7 +1,7 @@
 $(document).ready(function() { /*畫面上所有的DOM都載入後*/
 
         
-$)('#Sav').click(function() { 
+$('#Sav').click(function() { 
         var C = $("#Hwmc").val();
         if( C ==0 || document.getElementById('Projectname').value=="請選擇項目名稱" )
                 alert("有必填未填");
