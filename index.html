@@ -33,13 +33,25 @@
                        	 	$('#P5').text(P);
                          	var M=$('#Hwmc').val();
                             $('#M5').text(M);
+                            
+                            $(".input").find(":text,textarea,select").each(function() {
+                				$(this).val("");
+            					});
+                            
                        	 	$('#R5').show();
                             
                 		 	return false; 
                 	}
         	}
-	});
+		});
         
+        $("#Dsc").click(function(){
+        	$(".input").find(":text,textarea,select").each(function() {
+                $(this).val("");
+            });
+            
+            
+        });
         
         
 	});
@@ -124,13 +136,13 @@
     <td  colspan="2" >
       <select id="Projectname"  style="background:yellow">
         <option selected="true" value="1">請選擇項目名稱</option>
-        <option selected="false" value="2" >消耗性器材</option>
-        <option selected="false" value="3" >電腦使用費</option>
-        <option selected="false" value="4" >雜支</option>
-        <option selected="false" value="5" >資料檢索費</option>
-        <option selected="false" value="6" >實驗動物</option>
-        <option selected="false" value="7" >論文發表費</option>
-        <option selected="false" value="8" >其他</option>
+        <option value="2" >消耗性器材</option>
+        <option value="3" >電腦使用費</option>
+        <option value="4" >雜支</option>
+        <option value="5" >資料檢索費</option>
+        <option value="6" >實驗動物</option>
+        <option value="7" >論文發表費</option>
+        <option value="8" >其他</option>
       </select>
     </td>
   </tr>
