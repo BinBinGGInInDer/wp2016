@@ -5,7 +5,7 @@ $(document).ready(init); /*畫面上所有的DOM都載入後*/
             /*註冊removeRow函數*/
             $.fn.removeRow = function (row) {
                 // Make sure row has value     
-                if (!row) { row = 1; }
+               // if (!row) { row = 1; }
                 $(' .css_row :nth-child(' + row + '), .css_row :nth-child(' + row + ')', this).hide();/*該欄隱藏*/
                 return this;
             };
