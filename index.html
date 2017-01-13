@@ -6,39 +6,103 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script>
 	$(document).ready(function() { /*畫面上所有的DOM都載入後*/
-        
+        var chK1,chK2,chK3,chK4,chK5=0;
+        var full=0;
 	$('#Sav').click(function() { 
         	
         	if( document.getElementById('Hwmc').value=='' || document.getElementById('Projectname').value==1 )
                 	alert("有必填未填");
         	else{
-                	var  check = $('#M5').val();
-                	if( check != 0)
+                	
+                	if( full >= 5)
                         	alert("超過五個物品囉");
-                	else{
+                	else{	
                     		
-                        	var T=$("#Projectname option:selected").text();
-                        	$('#Pj5').text(T);
+                    		full++;
+                            var This1= $('#M1').val();
+                            var This2= $('#M2').val();
+                            var This3= $('#M3').val();
+                            var This4= $('#M4').val();
+                            var This5= $('#M5').val();
                             
-                            var S = document.getElementById("Unit").value;
-    						$('#U5').text(S);
+                            if(This1==0)
+                            {
+                            	                        
+                                var T=$("#Projectname option:selected").text();
+                        		$('#Pj1').text(T);
                             
-                            var N = $('#Num').val();
-							var P = $('#Prc').val();
+                            	var S = document.getElementById("Unit").value;
+    							$('#U1').text(S);
+                            
+                            	var N = $('#Num').val();
+								var P = $('#Prc').val();
 							    
                             
-                        	$('#N5').text(N);
+                        		$('#N1').text(N);
                             
-                        	var P=$('#Prc').val();
-                       	 	$('#P5').text(P);
-                         	var M=$('#Hwmc').val();
-                            $('#M5').text(M);
+                        		var P=$('#Prc').val();
+                       	 		$('#P1').text(P);
+                         		var M=$('#Hwmc').val();
+                            	$('#M1').text(M);
+                            	$('#R1').show();    
+                                
+                                
                             
-                            $(".input").find(":text,textarea,select").each(function() {
+                            }else if(This2==0)
+                            {
+                            	var T=$("#Projectname option:selected").text();
+                        		$('#Pj2').text(T);
+                            
+                            	var S = document.getElementById("Unit").value;
+    							$('#U2').text(S);
+                            
+                            	var N = $('#Num').val();
+								var P = $('#Prc').val();
+							    
+                            
+                        		$('#N2').text(N);
+                            
+                        		var P=$('#Prc').val();
+                       	 		$('#P2').text(P);
+                         		var M=$('#Hwmc').val();
+                            	$('#M2').text(M);
+                            	$('#R2').show();
+                            
+                            }else if(This3==0)
+                            {
+                            	
+                            
+                            }else if(This4==0)
+                            {
+                            	
+                            
+                            }else if(This5==0)
+                            {
+                            	var T=$("#Projectname option:selected").text();
+                        	$('#Pj5').text(T);
+                            
+                            	var S = document.getElementById("Unit").value;
+    							$('#U5').text(S);
+                            
+                            	var N = $('#Num').val();
+								var P = $('#Prc').val();
+							    
+                            
+                        		$('#N5').text(N);
+                            
+                        		var P=$('#Prc').val();
+                       	 		$('#P5').text(P);
+                         		var M=$('#Hwmc').val();
+                           	 	$('#M5').text(M);	
+                            	$('#R2').show();
+                            }
+                            
+                        	
+                            			$(".input").find(":text,textarea,select").each(function() {
                 				$(this).val("");
             					});
                             
-                       	 	$('#R5').show();
+                       	 	
                             
                 		 	return false; 
                 	}
@@ -175,7 +239,7 @@
   <tr>
     <td>備註</td>
     <td  colspan="7" >
-      <textarea cols="100" rows="5" id="Rmk">@@
+      <textarea cols="100" rows="5" id="Rmk">
     </textarea>
   </tr>
     <tr>
