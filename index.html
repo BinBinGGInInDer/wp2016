@@ -42,7 +42,7 @@
                                 
                             	$('#M1').text(M);
                             	$('#R1').show();    
-                                full--;
+                                
                                 
                             
                             }else if(This2==0)
@@ -62,7 +62,7 @@
                          		var M=N*P;
                             	$('#M2').text(M);
                             	$('#R2').show();
-                            	full--;
+                            	
                             }else if(This3==0)
                             {
                             	var T=$("#Projectname option:selected").text();
@@ -82,7 +82,7 @@
                          		var M=N*P;
                             	$('#M3').text(M);
                             	$('#R3').show();
-                            	full--;
+                            	
                             }else if(This4==0)
                             {
                             	var T=$("#Projectname option:selected").text();
@@ -101,7 +101,7 @@
                          		var M=N*P;
                             	$('#M4').text(M);
                             	$('#R4').show();
-                            	full--;
+                            	
                             }else if(This5==0)
                             {
                             	var T=$("#Projectname option:selected").text();
@@ -119,7 +119,7 @@
                          		var M=N*P;
                            	 	$('#M5').text(M);	
                             	$('#R5').show();
-                                full--;
+                                
                             }
                             
                         	Count();
@@ -138,27 +138,29 @@
                             total=total+ parseInt($('#M5').text());
                             $('#total').text(total);
         
-        }
+        };
         
         $("#Dsc").click(function(){
         	$(".input").find(":text,textarea,select").each(function() {
                 $(this).val("");
             });
-            
-            
         });
         
-        function Del1(){
-        alert('??');
-        	$('#R1').hide();
-            
-            $('#M1').text('0');
-            
-           // Count();
-            }
-        
-        
-	});
+         $("#B1").click(function(){
+            $('#R1').hide();$('#M1').text('0');Count();full--;
+        });
+		$("#B2").click(function(){
+            $('#R2').hide();$('#M2').text('0');Count();full--;
+        });
+        $("#B3").click(function(){
+            $('#R3').hide();$('#M3').text('0');Count();full--;
+        });
+        $("#B4").click(function(){
+            $('#R4').hide();$('#M4').text('0');Count();full--;
+        });
+	});$("#B5").click(function(){
+            $('#R5').hide();$('#M5').text('0');Count();full--;
+        });
 </script>
 	  
 </head>
@@ -181,7 +183,7 @@
   </tr>
   <tr class="css_row" id="R1" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="Del1()">Delete</button></td>
+    <td class="css_cell1"><button id="B1" >Delete</button></td>
     <td class="css_cell2" id="Pj1"></td>
     <td class="css_cell3" id="E1"></td>
     <td class="css_cell" id="U1"> 0 </td>
@@ -191,7 +193,7 @@
   </tr>
   <tr class="css_row" id="R2" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="$('#R2').hide();$('#M2').text('0');">Delete</button></td>
+    <td class="css_cell1"><button id="B2">Delete</button></td>
     <td class="css_cell2" id="Pj2"></td>
     <td class="css_cell3" id="E2">0</td>
     <td class="css_cell" id="U2"> 0 </td>
@@ -201,7 +203,7 @@
   </tr>
   <tr class="css_row" id="R3" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="$('#R3').hide();$('#M3').text('0');">Delete</button></td>
+    <td class="css_cell1"><button id="B3">Delete</button></td>
     <td class="css_cell2" id="Pj3"></td>
     <td class="css_cell3" id="E3">0</td>
     <td class="css_cell" id="U3"> 0 </td>
@@ -211,7 +213,7 @@
   </tr>
   <tr class="css_row" id="R4" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="$('#R4').hide();$('#M4').text('0');">Delete</button></td>
+    <td class="css_cell1"><button id="B4">Delete</button></td>
     <td class="css_cell2" id="Pj4"></td>
     <td class="css_cell3" id="E4">0</td>
     <td class="css_cell" id="U4"> 0 </td>
@@ -221,7 +223,7 @@
   </tr> 
   <tr class="css_row" id="R5" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="$('#R5').hide();$('#M5').text('0');">Delete</button></td>
+    <td class="css_cell1"><button id="B5">Delete</button></td>
     <td class="css_cell2" id="Pj5"></td>
     <td class="css_cell3" id="E5">0</td>
     <td class="css_cell" id="U5">0</td>
