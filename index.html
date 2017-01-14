@@ -8,6 +8,8 @@
 	$(document).ready(function() { /*畫面上所有的DOM都載入後*/
         var chK1,chK2,chK3,chK4,chK5=0;
         var full=0;
+        
+        ///////////////////////////////////////////SAVE鍵work
 	$('#Sav').click(function() { 
         	
         	if(document.getElementById('Prc').value=='' || document.getElementById('Num').value=='' || document.getElementById('Projectname').value==1 )
@@ -30,7 +32,11 @@
                             	                        
                                 var T=$("#Projectname option:selected").text();
                         		$('#Pj1').text(T);
-                            
+                            	var E=$("#Exp").text();
+                                $("#E1").text(E);
+                                
+                                
+                                
                             	var S = document.getElementById("Unit").value;
     							$('#U1').text(S);
                             
@@ -105,7 +111,7 @@
                             }else if(This5==0)
                             {
                             	var T=$("#Projectname option:selected").text();
-                        	$('#Pj5').text(T);
+                        		$('#Pj5').text(T);
                             
                             	var S = document.getElementById("Unit").value;
     							$('#U5').text(S);
@@ -160,6 +166,46 @@
 	 	$("#B5").click(function(){
             $('#R5').hide();$('#M5').text('0');Count();full--;
         });
+        
+        //////////////////////////Revise click
+        $("#R1").click(function(){
+        /*var T=$("#Projectname option:selected").text();
+                        		$('#Pj5').text(T);
+                            
+                            	var S = document.getElementById("Unit").value;
+    							$('#U5').text(S);
+                            
+                            	var N = $('#Num').val();
+								var P = $('#Prc').val();
+							    
+                            
+                        		$('#N5').text(N);
+                               	$('#P5').text(P);
+                         		var M=N*P;
+                           	 	$('#M5').text(M);	
+                            	$('#R5').show();*/
+             var T=$("#Pj1").text();
+             $("#Projectname").text(T);
+             var E=$("#E1").text();
+             $("#Exp").text(E);
+             var S=$("#U1").text;
+             $("#Unit").text(S);
+             var N = $('#N5').text();
+             var P =$('#P1').text();
+             var M = $('#M1').text();
+             $("#Num").text(N);
+             $("#Prc").text(P);
+             $("#Hwmc").text(M);
+             
+             
+        
+        
+        
+        
+        
+        
+        
+        };
     });
 </script>
 	  
@@ -182,7 +228,7 @@
     <td class="css_cell"> 金額 </td>
   </tr>
   <tr class="css_row" id="R1" style="display:none;">
-    <td class="css_cell1"><button>Revise</button></td>
+    <td class="css_cell1"><button id="R1">Revise</button></td>
     <td class="css_cell1"><button id="B1" >Delete</button></td>
     <td class="css_cell2" id="Pj1"></td>
     <td class="css_cell3" id="E1"></td>
