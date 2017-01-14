@@ -131,11 +131,10 @@
                 		 	return false; 
                 	}
         	}
-		});
+		});///////////////////////save end
         
         function Count(){
-        					var total=parseInt($('#M1').text()) + parseInt($('#M2').text()) + parseInt($('#M3').text()) + parseInt($('#M4').text()) ;
-                            total=total+ parseInt($('#M5').text());
+        					var total=parseInt($('#M1').text()) + parseInt($('#M2').text()) + parseInt($('#M3').text()) + parseInt($('#M4').text()) + parseInt($('#M5').text());
                             $('#total').text(total);
         
         };
@@ -158,9 +157,10 @@
         $("#B4").click(function(){
             $('#R4').hide();$('#M4').text('0');Count();full--;
         });
-	});$("#B5").click(function(){
+	 	$("#B5").click(function(){
             $('#R5').hide();$('#M5').text('0');Count();full--;
         });
+    });
 </script>
 	  
 </head>
@@ -195,7 +195,7 @@
     <td class="css_cell1"><button>Revise</button></td>
     <td class="css_cell1"><button id="B2">Delete</button></td>
     <td class="css_cell2" id="Pj2"></td>
-    <td class="css_cell3" id="E2">0</td>
+    <td class="css_cell3" id="E2"></td>
     <td class="css_cell" id="U2"> 0 </td>
     <td class="css_cell" id="N2"> 0 </td>
     <td class="css_cell" id="P2"> 0 </td>
@@ -205,7 +205,7 @@
     <td class="css_cell1"><button>Revise</button></td>
     <td class="css_cell1"><button id="B3">Delete</button></td>
     <td class="css_cell2" id="Pj3"></td>
-    <td class="css_cell3" id="E3">0</td>
+    <td class="css_cell3" id="E3"></td>
     <td class="css_cell" id="U3"> 0 </td>
     <td class="css_cell" id="N3"> 0 </td>
     <td class="css_cell" id="P3"> 0 </td>
@@ -215,7 +215,7 @@
     <td class="css_cell1"><button>Revise</button></td>
     <td class="css_cell1"><button id="B4">Delete</button></td>
     <td class="css_cell2" id="Pj4"></td>
-    <td class="css_cell3" id="E4">0</td>
+    <td class="css_cell3" id="E4"></td>
     <td class="css_cell" id="U4"> 0 </td>
     <td class="css_cell" id="N4"> 0 </td>
     <td class="css_cell" id="P4"> 0 </td>
@@ -225,7 +225,7 @@
     <td class="css_cell1"><button>Revise</button></td>
     <td class="css_cell1"><button id="B5">Delete</button></td>
     <td class="css_cell2" id="Pj5"></td>
-    <td class="css_cell3" id="E5">0</td>
+    <td class="css_cell3" id="E5"></td>
     <td class="css_cell" id="U5">0</td>
     <td class="css_cell" id="N5">0</td>
     <td class="css_cell" id="P5">0</td>
