@@ -34,102 +34,56 @@
                             var This4= $('#M4').text();
                             var This5= $('#M5').text();
                             
+                            var T=$("#Projectname option:selected").text();
+                            var E=$("#Exp").text();
+                            var S = document.getElementById("Unit").value;
+                            var N = $('#Num').val();
+                            var P = $('#Prc').val();
+                            var M=N*P;
+                            
                             if(This1==0)
                             {
-                            	                        
-                                var T=$("#Projectname option:selected").text();
                         		$('#Pj1').text(T);
-                            	var E=$("#Exp").text();
                                 $("#E1").text(E);
-                                
-                                
-                                
-                            	var S = document.getElementById("Unit").value;
     							$('#U1').text(S);
-                            
-                            	var N = $('#Num').val();
-								var P = $('#Prc').val();
 							    $('#N1').text(N);
                        	 		$('#P1').text(P);
-                         		var M=N*P;
-                                
                             	$('#M1').text(M);
-                            	$('#R1').show();    
-                                
-                                
-                            
+                            	$('#R1').show();   
                             }else if(This2==0)
                             {
-                            	var T=$("#Projectname option:selected").text();
-                        		$('#Pj2').text(T);
-                            
-                            	var S = document.getElementById("Unit").value;
+                            	$('#Pj2').text(T);
     							$('#U2').text(S);
-                            
-                            	var N = $('#Num').val();
-								var P = $('#Prc').val();
-							    
-                            
                         		$('#N2').text(N);
                             	$('#P2').text(P);
-                         		var M=N*P;
                             	$('#M2').text(M);
                             	$('#R2').show();
                             	
                             }else if(This3==0)
                             {
-                            	var T=$("#Projectname option:selected").text();
                         		$('#Pj3').text(T);
-                            
-                            	var S = document.getElementById("Unit").value;
     							$('#U3').text(S);
-                            
-                            	var N = $('#Num').val();
-								var P = $('#Prc').val();
-							    
-                            
                         		$('#N3').text(N);
-                            
-                        		var P=$('#Prc').val();
                        	 		$('#P3').text(P);
-                         		var M=N*P;
                             	$('#M3').text(M);
                             	$('#R3').show();
                             	
                             }else if(This4==0)
                             {
-                            	var T=$("#Projectname option:selected").text();
                         		$('#Pj4').text(T);
-                            
-                            	var S = document.getElementById("Unit").value;
     							$('#U4').text(S);
-                            
-                            	var N = $('#Num').val();
-								var P = $('#Prc').val();
-							    
-                            
                         		$('#N4').text(N);
                             
                        	 		$('#P4').text(P);
-                         		var M=N*P;
                             	$('#M4').text(M);
                             	$('#R4').show();
                             	
                             }else if(This5==0)
                             {
-                            	var T=$("#Projectname option:selected").text();
                         		$('#Pj5').text(T);
-                            
-                            	var S = document.getElementById("Unit").value;
     							$('#U5').text(S);
-                            
-                            	var N = $('#Num').val();
-								var P = $('#Prc').val();
-							    
-                            
                         		$('#N5').text(N);
                                	$('#P5').text(P);
-                         		var M=N*P;
                            	 	$('#M5').text(M);	
                             	$('#R5').show();
                                 
