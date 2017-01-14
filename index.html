@@ -10,7 +10,7 @@
         var full=0;
 	$('#Sav').click(function() { 
         	
-        	if( document.getElementById('Hwmc').value=='' || document.getElementById('Projectname').value==1 )
+        	if(document.getElementById('Prc').value=='' || document.getElementById('Num').value=='' || document.getElementById('Projectname').value==1 )
                 	alert("有必填未填");
         	else{
                 	
@@ -19,11 +19,11 @@
                 	else{	
                     		
                     		full++;
-                            var This1= $('#M1').val();
-                            var This2= $('#M2').val();
-                            var This3= $('#M3').val();
-                            var This4= $('#M4').val();
-                            var This5= $('#M5').val();
+                            var This1= $('#M1').text();
+                            var This2= $('#M2').text();
+                            var This3= $('#M3').text();
+                            var This4= $('#M4').text();
+                            var This5= $('#M5').text();
                             
                             if(This1==0)
                             {
@@ -36,16 +36,13 @@
                             
                             	var N = $('#Num').val();
 								var P = $('#Prc').val();
-							    
-                            
-                        		$('#N1').text(N);
-                            
-                        		var P=$('#Prc').val();
+							    $('#N1').text(N);
                        	 		$('#P1').text(P);
-                         		var M=$('#Hwmc').val();
+                         		var M=N*P;
+                                
                             	$('#M1').text(M);
                             	$('#R1').show();    
-                                
+                                full--;
                                 
                             
                             }else if(This2==0)
@@ -61,21 +58,50 @@
 							    
                             
                         		$('#N2').text(N);
-                            
-                        		var P=$('#Prc').val();
-                       	 		$('#P2').text(P);
-                         		var M=$('#Hwmc').val();
+                            	$('#P2').text(P);
+                         		var M=N*P;
                             	$('#M2').text(M);
                             	$('#R2').show();
-                            
+                            	full--;
                             }else if(This3==0)
                             {
-                            	
+                            	var T=$("#Projectname option:selected").text();
+                        		$('#Pj3').text(T);
                             
+                            	var S = document.getElementById("Unit").value;
+    							$('#U3').text(S);
+                            
+                            	var N = $('#Num').val();
+								var P = $('#Prc').val();
+							    
+                            
+                        		$('#N3').text(N);
+                            
+                        		var P=$('#Prc').val();
+                       	 		$('#P3').text(P);
+                         		var M=N*P;
+                            	$('#M3').text(M);
+                            	$('#R3').show();
+                            	full--;
                             }else if(This4==0)
                             {
-                            	
+                            	var T=$("#Projectname option:selected").text();
+                        		$('#Pj4').text(T);
                             
+                            	var S = document.getElementById("Unit").value;
+    							$('#U4').text(S);
+                            
+                            	var N = $('#Num').val();
+								var P = $('#Prc').val();
+							    
+                            
+                        		$('#N4').text(N);
+                            
+                       	 		$('#P4').text(P);
+                         		var M=N*P;
+                            	$('#M4').text(M);
+                            	$('#R4').show();
+                            	full--;
                             }else if(This5==0)
                             {
                             	var T=$("#Projectname option:selected").text();
@@ -89,25 +115,30 @@
 							    
                             
                         		$('#N5').text(N);
-                            
-                        		var P=$('#Prc').val();
-                       	 		$('#P5').text(P);
-                         		var M=$('#Hwmc').val();
+                               	$('#P5').text(P);
+                         		var M=N*P;
                            	 	$('#M5').text(M);	
-                            	$('#R2').show();
+                            	$('#R5').show();
+                                full--;
                             }
                             
-                        	
-                            			$(".input").find(":text,textarea,select").each(function() {
+                        	Count();
+                            $(".input").find(":text,textarea,select").each(function() {
                 				$(this).val("");
             					});
                             
                        	 	
-                            
                 		 	return false; 
                 	}
         	}
 		});
+        
+        function Count(){
+        					var total=parseInt($('#M1').text()) + parseInt($('#M2').text()) + parseInt($('#M3').text()) + parseInt($('#M4').text()) ;
+                            total=total+ parseInt($('#M5').text());
+                            $('#total').text(total);
+        
+        }
         
         $("#Dsc").click(function(){
         	$(".input").find(":text,textarea,select").each(function() {
@@ -116,6 +147,15 @@
             
             
         });
+        
+        function Del1(){
+        alert('??');
+        	$('#R1').hide();
+            
+            $('#M1').text('0');
+            
+           // Count();
+            }
         
         
 	});
@@ -127,7 +167,7 @@
 <div class="B">  
 <h2 style="display:inline;">計畫名稱 :</h2> <h2 id="pro" style="display:inline;">電機多媒體計畫</h2>
 </div>
-<h3 style="display:inline;">總金額 :</h3><div class="total" style="display:inline;">0</div>
+<h3 style="display:inline;">總金額 :</h3><div id="total" style="display:inline;">0</div>
 <table class="css_table" >
   <tr class="css_row">
     <td class="css_cell1"> 修改 </td>
@@ -141,7 +181,7 @@
   </tr>
   <tr class="css_row" id="R1" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="$('#R1').hide();">Delete</button></td>
+    <td class="css_cell1"><button onclick="Del1()">Delete</button></td>
     <td class="css_cell2" id="Pj1"></td>
     <td class="css_cell3" id="E1"></td>
     <td class="css_cell" id="U1"> 0 </td>
@@ -151,9 +191,9 @@
   </tr>
   <tr class="css_row" id="R2" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="$('#R2').hide();">Delete</button></td>
+    <td class="css_cell1"><button onclick="$('#R2').hide();$('#M2').text('0');">Delete</button></td>
     <td class="css_cell2" id="Pj2"></td>
-    <td class="css_cell3" id="E2">3</td>
+    <td class="css_cell3" id="E2">0</td>
     <td class="css_cell" id="U2"> 0 </td>
     <td class="css_cell" id="N2"> 0 </td>
     <td class="css_cell" id="P2"> 0 </td>
@@ -161,9 +201,9 @@
   </tr>
   <tr class="css_row" id="R3" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="$('#R3').hide();">Delete</button></td>
+    <td class="css_cell1"><button onclick="$('#R3').hide();$('#M3').text('0');">Delete</button></td>
     <td class="css_cell2" id="Pj3"></td>
-    <td class="css_cell3" id="E3">3</td>
+    <td class="css_cell3" id="E3">0</td>
     <td class="css_cell" id="U3"> 0 </td>
     <td class="css_cell" id="N3"> 0 </td>
     <td class="css_cell" id="P3"> 0 </td>
@@ -171,9 +211,9 @@
   </tr>
   <tr class="css_row" id="R4" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="$('#R4').hide();">Delete</button></td>
+    <td class="css_cell1"><button onclick="$('#R4').hide();$('#M4').text('0');">Delete</button></td>
     <td class="css_cell2" id="Pj4"></td>
-    <td class="css_cell3" id="E4">3</td>
+    <td class="css_cell3" id="E4">0</td>
     <td class="css_cell" id="U4"> 0 </td>
     <td class="css_cell" id="N4"> 0 </td>
     <td class="css_cell" id="P4"> 0 </td>
@@ -181,17 +221,17 @@
   </tr> 
   <tr class="css_row" id="R5" style="display:none;">
     <td class="css_cell1"><button>Revise</button></td>
-    <td class="css_cell1"><button onclick="$('#R5').hide();">Delete</button></td>
+    <td class="css_cell1"><button onclick="$('#R5').hide();$('#M5').text('0');">Delete</button></td>
     <td class="css_cell2" id="Pj5"></td>
-    <td class="css_cell3" id="E5"></td>
-    <td class="css_cell" id="U5"></td>
-    <td class="css_cell" id="N5"></td>
-    <td class="css_cell" id="P5"></td>
-    <td class="css_cell" id="M5"></td>
+    <td class="css_cell3" id="E5">0</td>
+    <td class="css_cell" id="U5">0</td>
+    <td class="css_cell" id="N5">0</td>
+    <td class="css_cell" id="P5">0</td>
+    <td class="css_cell" id="M5">0</td>
   </tr>
 </table>
 <div style="font-size: 16px; color:blue; display:inline;" ><br><br><br>說明:</div>
-<div style="font-size: 16px; display:inline;"> 黃色為必填事項</div>
+<div style="font-size: 16px; display:inline;"> 黃色為必填事項，灰色不需填寫</div>
   
 	
 <table style="background:#5BC8DD; border:solid 1px;" class="input">
@@ -212,21 +252,21 @@
   </tr>
   
   <tr>
-    <td>單位</td>on
+    <td>單位</td>
     <td>
       <input type="text" id="Unit" style="width:100px">
     </td>
     <td>數量</td>
     <td>
-      <input type="text" id="Num" style="width:100px" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+      <input type="text" id="Num" style="background:yellow;width:100px" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
     </td>
     <td>單價</td>
     <td>
-      <input type="text" id="Prc" style="width:100px" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+      <input type="text" id="Prc" style="background:yellow;width:100px" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
     </td>
     <td>金額</td>
     <td>
-      <input type="text" id="Hwmc" style="background:yellow;width:100px" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" >
+      <input type="text" id="Hwmc" style="background:gray;width:100px" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" >
   </tr>
   
   <tr>
