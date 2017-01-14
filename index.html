@@ -8,7 +8,7 @@
 	$(document).ready(function() { /*畫面上所有的DOM都載入後*/
         var chK1,chK2,chK3,chK4,chK5=0;
         var full=0;
-        
+        var REID;
         ///////////////////////////////////////////SAVE鍵work
 	$('#Sav').click(function() { 
         	
@@ -21,6 +21,13 @@
                 	else{	
                     		
                     		full++;
+                            if(REID=="Re1"){/////////判斷是否為正在更改的資料
+            	$('#M1').text('0');REID="";full--;}else if(REID=="Re2"){
+            	$('#M2').text('0');REID="";full--;}else if(REID=="Re3"){
+            	$('#M3').text('0');REID="";full--;}else if(REID=="Re4"){
+            	$('#M4').text('0');REID="";full--;}else if(REID=="Re5"){
+            	$('#M5').text('0');REID="";full--;}
+                
                             var This1= $('#M1').text();
                             var This2= $('#M2').text();
                             var This3= $('#M3').text();
@@ -139,16 +146,24 @@
         	}
 		});///////////////////////save end
         
+        /////////////////////計算總金額的function:count
         function Count(){
         					var total=parseInt($('#M1').text()) + parseInt($('#M2').text()) + parseInt($('#M3').text()) + parseInt($('#M4').text()) + parseInt($('#M5').text());
                             $('#total').text(total);
         
         };
         
+        ///////////////////Discard按鍵的function
         $("#Dsc").click(function(){
         	$(".input").find(":text,textarea,select").each(function() {
                 $(this).val("");
             });
+            if(REID=="Re1"){/////////判斷若為正在更改的資料按鍵放棄則直接秀出原始資料
+            	$('#R1').show();REID="";}else if(REID=="Re2"){
+            	$('#R2').show();REID="";}else if(REID=="Re3"){
+            	$('#R3').show();REID="";}else if(REID=="Re4"){
+            	$('#R4').show();REID="";}else if(REID=="Re5"){
+            	$('#R5').show();REID="";}
         });
         
          $("#B1").click(function(){
@@ -167,45 +182,85 @@
             $('#R5').hide();$('#M5').text('0');Count();full--;
         });
         
+        
         //////////////////////////Revise click
-        $("#R1").click(function(){
-        /*var T=$("#Projectname option:selected").text();
-                        		$('#Pj5').text(T);
-                            
-                            	var S = document.getElementById("Unit").value;
-    							$('#U5').text(S);
-                            
-                            	var N = $('#Num').val();
-								var P = $('#Prc').val();
-							    
-                            
-                        		$('#N5').text(N);
-                               	$('#P5').text(P);
-                         		var M=N*P;
-                           	 	$('#M5').text(M);	
-                            	$('#R5').show();*/
-             var T=$("#Pj1").text();
-             $("#Projectname").text(T);
-             var E=$("#E1").text();
+        $(".RR").click(function(event){
+        	 REID= $(this).attr('id');  
+             
+             if(REID == "Re1" )
+             {
+             	var T=$("#Pj1").text();
+             	var E=$("#E1").text();
+             	var U=$("#U1").text();
+             	var N = $('#N1').text();
+             	var P =$('#P1').text();
+             	var M = $('#M1').text();
+                $('#R1').hide();
+             }else if(REID == "Re2" )
+             {
+             	var T=$("#Pj2").text();
+             	var E=$("#E2").text();
+             	var U=$("#U2").text();
+             	var N = $('#N2').text();
+             	var P =$('#P2').text();
+             	var M = $('#M2').text();
+                $('#R2').hide();
+             }else  if(REID == "Re3" )
+             {
+             	var T=$("#Pj3").text();
+             	var E=$("#E3").text();
+             	var U=$("#U3").text();
+             	var N = $('#N3').text();
+             	var P =$('#P3').text();
+             	var M = $('#M3').text();
+                $('#R3').hide();
+             }else if(REID == "Re4" )
+             {
+             	var T=$("#Pj4").text();
+             	var E=$("#E4").text();
+             	var U=$("#U4").text();
+             	var N = $('#N4').text();
+             	var P =$('#P4').text();
+             	var M = $('#M4').text();
+                $('#R4').hide();
+             }else if(REID == "Re5" )
+             {
+             	var T=$("#Pj5").text();
+             	var E=$("#E5").text();
+             	var U=$("#U5").text();
+             	var N = $('#N5').text();
+             	var P =$('#P5').text();
+             	var M = $('#M5').text();
+             	$('#R5').hide();
+             }
+             
+             if(T=='消耗性器材')
+             { $("#Projectname").val(2);
+             }else if(T=='電腦使用費')
+             { $("#Projectname").val(3);
+             }else if(T=='雜支')
+             { $("#Projectname").val(4);
+             }else if(T=='資料檢索費')
+             { $("#Projectname").val(5);
+             }else if(T=='實驗動物')
+             { $("#Projectname").val(6);
+             }else if(T=='論文發表費')
+             { $("#Projectname").val(7);
+             }else if(T=='其他')
+             { $("#Projectname").val(8);
+             }
+             
              $("#Exp").text(E);
-             var S=$("#U1").text;
-             $("#Unit").text(S);
-             var N = $('#N5').text();
-             var P =$('#P1').text();
-             var M = $('#M1').text();
-             $("#Num").text(N);
-             $("#Prc").text(P);
-             $("#Hwmc").text(M);
+             var uu = document.getElementById("Unit");
+             var nn = document.getElementById("Num");
+             var pp = document.getElementById("Prc");
+             var mm = document.getElementById("Hwmc");
              
-             
-        
-        
-        
-        
-        
-        
-        
-        };
+             uu.value =U;
+             nn.value =N;
+             pp.value =P;
+             mm.value =M;
+        });/////////////////////Revise end
     });
 </script>
 	  
@@ -228,7 +283,7 @@
     <td class="css_cell"> 金額 </td>
   </tr>
   <tr class="css_row" id="R1" style="display:none;">
-    <td class="css_cell1"><button id="R1">Revise</button></td>
+    <td class="css_cell1"><button class="RR" id="Re1">Revise</button></td>
     <td class="css_cell1"><button id="B1" >Delete</button></td>
     <td class="css_cell2" id="Pj1"></td>
     <td class="css_cell3" id="E1"></td>
@@ -238,7 +293,7 @@
     <td class="css_cell" id="M1"> 0 </td>
   </tr>
   <tr class="css_row" id="R2" style="display:none;">
-    <td class="css_cell1"><button>Revise</button></td>
+    <td class="css_cell1"><button class="RR" id="Re2">Revise</button></td>
     <td class="css_cell1"><button id="B2">Delete</button></td>
     <td class="css_cell2" id="Pj2"></td>
     <td class="css_cell3" id="E2"></td>
@@ -248,7 +303,7 @@
     <td class="css_cell" id="M2"> 0 </td>
   </tr>
   <tr class="css_row" id="R3" style="display:none;">
-    <td class="css_cell1"><button>Revise</button></td>
+    <td class="css_cell1"><button class="RR" id="Re3">Revise</button></td>
     <td class="css_cell1"><button id="B3">Delete</button></td>
     <td class="css_cell2" id="Pj3"></td>
     <td class="css_cell3" id="E3"></td>
@@ -258,7 +313,7 @@
     <td class="css_cell" id="M3"> 0 </td>
   </tr>
   <tr class="css_row" id="R4" style="display:none;">
-    <td class="css_cell1"><button>Revise</button></td>
+    <td class="css_cell1"><button class="RR" id="Re4">Revise</button></td>
     <td class="css_cell1"><button id="B4">Delete</button></td>
     <td class="css_cell2" id="Pj4"></td>
     <td class="css_cell3" id="E4"></td>
@@ -268,7 +323,7 @@
     <td class="css_cell" id="M4"> 0 </td>
   </tr> 
   <tr class="css_row" id="R5" style="display:none;">
-    <td class="css_cell1"><button>Revise</button></td>
+    <td class="css_cell1"><button class="RR" id="Re5">Revise</button></td>
     <td class="css_cell1"><button id="B5">Delete</button></td>
     <td class="css_cell2" id="Pj5"></td>
     <td class="css_cell3" id="E5"></td>
@@ -320,15 +375,13 @@
   <tr>
     <td>說明</td>
     <td  colspan="7" >
-      <textarea cols="100" rows="5" id="Exp">
-    </textarea>
+      <textarea cols="100" rows="5" id="Exp"></textarea>
     </td>
   </tr>  
   <tr>
     <td>備註</td>
     <td  colspan="7" >
-      <textarea cols="100" rows="5" id="Rmk">
-    </textarea>
+      <textarea cols="100" rows="5" id="Rmk"></textarea>
   </tr>
     <tr>
     <td colspan="8">
